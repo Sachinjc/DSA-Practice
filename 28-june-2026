@@ -1,1 +1,146 @@
+// today learing in 59 sql questions from the leetcode top 50 sql
+// one video from youtube on most important questions on sql for placements 
+
+->  LeetCode 584 – Find Customer Referee
+Pattern
+
+Filtering + NULL Handling
+
+Trick
+
+Use IS NULL because NULL != 2 does not evaluate to TRUE.
+
+Mistakes
+Used only != 2
+Forgot OR referee_id IS NULL
+Complexity
+
+Time: O(n)
+
+Query
+SELECT name
+FROM Customer
+WHERE referee_id != 2
+   OR referee_id IS NULL;
+
+
+->  LeetCode 595 – Big Countries
+Pattern
+
+Filtering (WHERE)
+
+Trick
+
+The problem requires OR, not AND.
+
+Mistakes
+Used AND
+Compared numbers as strings ('3000000')
+Complexity
+
+Time: O(n)
+
+Query
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000
+   OR population >= 25000000;
+
+
+-> LeetCode 1148 – Article Views I
+Pattern
+
+Filtering + DISTINCT
+
+Trick
+
+Remove duplicate authors using DISTINCT.
+
+Mistakes
+Forgot DISTINCT
+Forgot alias AS id
+Forgot ORDER BY
+Complexity
+
+Time: O(n)
+
+Query
+SELECT DISTINCT author_id AS id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY id;
+
+
+-> LeetCode 1683 – Invalid Tweets
+Pattern
+
+String Functions
+
+Trick
+
+Use CHAR_LENGTH() instead of .length.
+
+Mistakes
+Wrote content.length
+Confused Java syntax with SQL
+Complexity
+
+Time: O(n)
+
+Query
+SELECT tweet_id
+FROM Tweets
+WHERE CHAR_LENGTH(content) > 15;
+
+
+-> LeetCode 1378 – Replace Employee ID With The Unique Identifier
+Pattern
+
+LEFT JOIN
+
+Trick
+
+Keep all employees even if they don't have a unique ID.
+
+Mistakes
+Used INNER JOIN
+Didn't understand table aliases (e, eu)
+Complexity
+
+Time: O(n)
+
+Query
+SELECT eu.unique_id,
+       e.name
+FROM Employees e
+LEFT JOIN EmployeeUNI eu
+ON e.id = eu.id;
+
+
+-> LeetCode 1581 – Customer Who Visited but Did Not Make Any Transactions
+Pattern
+
+LEFT JOIN + GROUP BY
+
+Trick
+
+Find rows with no match using IS NULL.
+
+Mistakes
+Used HAVING instead of WHERE
+Compared customer_id instead of visit_id
+Didn't group by customer_id
+Complexity
+
+Time: O(n)
+
+Query
+SELECT v.customer_id,
+       COUNT(*) AS count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t
+ON v.visit_id = t.visit_id
+WHERE t.visit_id IS NULL
+GROUP BY v.customer_id;
+
 
