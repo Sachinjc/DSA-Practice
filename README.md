@@ -1,2 +1,2 @@
 # DSA-Practice
-Here I add the problems  solved on particular day 
+Here I track the Learnigs of a Particular day 
