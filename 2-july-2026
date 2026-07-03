@@ -1,0 +1,20 @@
+# 8  ->  Graph Questions 
+
+Problems Solved
+✅ Detect Cycle in Undirected Graph (BFS)
+✅ Detect Cycle in Undirected Graph (DFS)
+✅ Eventual Safe States
+✅ Replace 'O's with 'X' (GFG)
+✅ Number of Distinct Islands
+✅ Bipartite Graph (BFS)
+✅ Bipartite Graph (DFS)
+✅ Detect Cycle in Directed Graph (DFS)
+
+Key Takeaways
+Strengthened understanding of BFS vs DFS traversal.
+Learned cycle detection techniques for both directed and undirected graphs.
+Practiced multi-source traversal and boundary DFS concepts.
+Improved confidence with graph coloring for bipartite graph problems.
+Gained better intuition for connected components and state tracking in graph problems.
+
+Consistency > Intensity. One step closer to placement readiness. 💻
