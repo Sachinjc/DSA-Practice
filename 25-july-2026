@@ -1,0 +1,53 @@
+# 📅 Daily Learning Log - July 25, 2026
+
+## ✅ What I Revised
+
+* Revised **20 Dynamic Programming (DP)** problems to strengthen pattern recognition and state transitions.
+* Reviewed important DP concepts:
+
+  * Memoization
+  * Tabulation
+  * State Definition
+  * Transition Formula
+  * Base Cases
+  * Space Optimization
+
+## 🆕 New Problems Learned
+
+### 1. Minimum Cost to Cut a Stick (LeetCode 1547)
+
+**Concepts:**
+
+* Interval Dynamic Programming
+* Partition DP
+* Choosing the best cut order to minimize total cost
+
+**Key Learning:**
+
+* Treat each possible cut as the first cut.
+* Recursively solve left and right intervals.
+* Cost of each cut equals the current stick length.
+
+---
+
+### 2. Super Egg Drop (LeetCode 887)
+
+**Concepts:**
+
+* DP + Binary Search Optimization
+* Minimax Strategy
+* Monotonic Property
+
+**Key Learning:**
+
+* Consider two cases for each drop:
+
+  * Egg breaks → search below.
+  * Egg survives → search above.
+* Binary search helps find the optimal floor efficiently, reducing the complexity from **O(k·n²)** to **O(k·n log n)**.
+
+## 🎯 Outcome
+
+* Reinforced interval DP and optimization techniques.
+* Improved understanding of advanced DP transitions and binary search optimization.
+* Built confidence in solving hard Dynamic Programming interview problems.
